@@ -132,7 +132,7 @@ static size_t align4(size_t x)
 	if( (x & 0x3) == 0)
 		return x;
 	else
-		return ( ( x >> 3 ) + 1 ) << 3;
+		return ( ( x >> 2 ) + 1 ) << 2;
 }
 
 
