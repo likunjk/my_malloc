@@ -61,7 +61,7 @@ static void* my_sbrk(size_t increment)
 static Block* findBlock(Block **last, size_t size)
 {
 	Block *b = firstBlock;
-	while( !b && !(b->isEmpty && b->size >= size) )
+	while( b && !(b->isEmpty && b->size >= size) )
 	{
 		*last = b;
 		b = b->next;
